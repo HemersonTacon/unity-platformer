@@ -15,16 +15,18 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
-            rb.velocity = new Vector2(-5f, rb.velocity.y);
+            rb.velocity = new Vector2(-10f, rb.velocity.y);
+            transform.localScale = new Vector2(-1, 1);
         }
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
-            rb.velocity = new Vector2(5f, rb.velocity.y);
+            rb.velocity = new Vector2(10f, rb.velocity.y);
+            transform.localScale = new Vector2(1, 1);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = new Vector2(rb.velocity.x, 5f);
+            rb.velocity = new Vector2(rb.velocity.x, 20f);
         }
     }
 }
